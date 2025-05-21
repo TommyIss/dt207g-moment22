@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  line-height: 1.3em;
+  font-size: 1.1em;
+  background-color: #E3EEB2;
+  border: 1px solid black;
+}
+
+main {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1%;
+  min-height: 500px;
+}
