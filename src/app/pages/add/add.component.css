@@ -1,0 +1,26 @@
+section {
+    width: 90%;
+    margin: 1% auto;
+}
+
+div {
+    border: 1px solid black;
+    padding: 1%;
+    margin: 2% 0;
+}
+
+label, button {
+    margin: 1%;
+}
+input {
+    margin: 0.5% 0;
+}
+button {
+    padding: 1%;
+    background-color: #4E6688;
+    color: white;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #71C0BB;
+}
