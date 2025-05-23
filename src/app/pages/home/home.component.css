@@ -1,0 +1,36 @@
+table, div, h2, p {
+    width: 90%;
+    margin: 0 auto;
+}
+
+p {
+    margin: 1% auto;
+}
+table {
+    border: 1px solid black;
+}
+
+td {
+    margin: 0 1%;
+    padding: 0 4px;
+    border: 1px solid black;
+    font-size: 0.9em;
+}
+
+th {
+    background-color: #71C0BB;
+    border: 1px solid black;
+}
+tr:nth-child(even) {
+    background-color: #71C0BB;
+}
+
+@media screen and (max-width: 700px) {
+    table, div, h2 {
+        width: 100%;
+    }
+    
+    #searchPhrase {
+        width: 60%;
+    }
+}

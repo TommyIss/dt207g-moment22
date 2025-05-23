@@ -1,1 +1,29 @@
-<p>home works!</p>
+<h2>
+    Startsida
+</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Företagsnamn</th>
+            <th>Roll</th>
+            <th>Plats</th>
+            <th>Startdatum</th>
+            <th>Slutdatum</th>
+            <th>Beskrivning</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let experience of experiences">
+            <td>{{ experience.companyname }}</td>
+            <td>{{ experience.jobtitle }}</td>
+            <td>{{ experience.location }}</td>
+            <td>{{ experience.startdate }}</td>
+            <td>{{ experience.enddate }}</td>
+            <td>{{ experience.description }}</td>
+        </tr>
+    </tbody>
+</table>
+@if(experiences.length === 0) {
+    <p>Inga inlägg hittades...</p>
+}
