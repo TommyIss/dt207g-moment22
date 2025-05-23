@@ -12,6 +12,8 @@ import { Router } from '@angular/router';
   styleUrl: './add.component.css'
 })
 export class AddComponent {
+  // Properties
+  id: number = 0;
   companyname: string = '';
   jobtitle: string = '';
   location: string = '';
@@ -24,6 +26,7 @@ export class AddComponent {
   
   addData() {
     let newExperience: Experience = {
+      id: this.id,
       companyname: this.companyname,
       jobtitle: this.jobtitle,
       location: this.location,

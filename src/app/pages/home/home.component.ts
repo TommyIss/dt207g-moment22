@@ -20,7 +20,20 @@ export class HomeComponent {
     this.experienceService.getData().subscribe(
       (experiences) => {
         this.experiences = experiences;
+        // console.log(experiences);
       }
     );
+  }
+  deletePost(id: number) {
+    this.experienceService.deleteData(id).subscribe({
+      next: () => {
+        console.log(`Inlägg med ID ${id} har raderats.`);
+        this.experiences.filter(experience => experience.id !== id);
+        this.experienceService.getData().subscribe(experiences => {
+          this.experiences = experiences;
+        });
+      },
+      error: err => console.error('Fel vid radering:', err)
+    });
   }
 }
