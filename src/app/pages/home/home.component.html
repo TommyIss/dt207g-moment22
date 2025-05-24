@@ -11,7 +11,7 @@
             <th>Startdatum</th>
             <th>Slutdatum</th>
             <th>Beskrivning</th>
-            <th>Radera</th>
+            <th>Redigera/ Radera</th>
         </tr>
     </thead>
     <tbody>
@@ -22,7 +22,7 @@
             <td>{{ experience.startdate }}</td>
             <td>{{ experience.enddate }}</td>
             <td>{{ experience.description }}</td>
-            <td><button (click)="deletePost(experience.id)">Radera</button></td>
+            <td><button (click)="updatePost(experience.id)">Ändra</button>/ <button (click)="deletePost(experience.id)">Radera</button></td>
         </tr>
     </tbody>
 </table>

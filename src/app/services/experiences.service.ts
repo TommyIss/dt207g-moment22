@@ -16,6 +16,9 @@ export class ExperiencesService {
   getData(): Observable<Experience[]> {
     return this.http.get<Experience[]>(this.url);
   }
+  getChosenData(id: number): Observable<Experience> {
+    return this.http.get<Experience>(`${this.url}/${id}`);
+  }
   postData(experience: Experience): Observable<Experience> {
     return this.http.post<Experience>(this.url, experience, {
       headers: new HttpHeaders({
@@ -25,5 +28,12 @@ export class ExperiencesService {
   }
   deleteData(id: number): Observable<void> {
     return this.http.delete<void>(`${this.url}/${id}`);
+  }
+  updateData(id: number, experience: Experience): Observable<Experience> {
+    return this.http.put<Experience>(`${this.url}/${id}`, experience, {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    });
   }
 }

@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Experience } from '../../models/experience';
 import { ExperiencesService } from '../../services/experiences.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +14,7 @@ export class HomeComponent {
   // Properties
   experiences: Experience[] = [];
 
-  constructor(private experienceService: ExperiencesService) {}
+  constructor(private experienceService: ExperiencesService, private router: Router) {}
 
   ngOnInit() { 
     // Hämta befintliga inlägg i databasen
@@ -35,5 +36,9 @@ export class HomeComponent {
       },
       error: err => console.error('Fel vid radering:', err)
     });
+  }
+
+  updatePost(id: number) {
+    this.router.navigate([`edit/${id}`]);
   }
 }
