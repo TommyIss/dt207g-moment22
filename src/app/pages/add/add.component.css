@@ -1,3 +1,9 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  border: none;
+}
+
 section {
     width: 90%;
     margin: 1% auto;
@@ -9,11 +15,12 @@ div {
     margin: 2% 0;
 }
 
-label, button {
+label, button, textarea {
     margin: 1%;
 }
-input {
+input, textarea {
     margin: 0.5% 0;
+    padding: 0.5%;
 }
 button {
     padding: 1%;
